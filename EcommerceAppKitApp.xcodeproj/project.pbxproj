@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F36E5B3D282082B500BB4357 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E5B3C282082B500BB4357 /* OnBoardingPage.swift */; };
 		F37F474128207E65009FAF0F /* EcommerceAppKitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F474028207E65009FAF0F /* EcommerceAppKitAppApp.swift */; };
 		F37F474328207E65009FAF0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F474228207E65009FAF0F /* ContentView.swift */; };
 		F37F474528207E72009FAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F474428207E72009FAF0F /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F36E5B3C282082B500BB4357 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		F37F473D28207E65009FAF0F /* EcommerceAppKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceAppKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37F474028207E65009FAF0F /* EcommerceAppKitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceAppKitAppApp.swift; sourceTree = "<group>"; };
 		F37F474228207E65009FAF0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F36E5B3B2820828700BB4357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F36E5B3C282082B500BB4357 /* OnBoardingPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F37F473428207E65009FAF0F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		F37F473F28207E65009FAF0F /* EcommerceAppKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				F36E5B3B2820828700BB4357 /* View */,
 				F37F474028207E65009FAF0F /* EcommerceAppKitAppApp.swift */,
 				F37F474228207E65009FAF0F /* ContentView.swift */,
 				F37F474428207E72009FAF0F /* Assets.xcassets */,
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37F474328207E65009FAF0F /* ContentView.swift in Sources */,
+				F36E5B3D282082B500BB4357 /* OnBoardingPage.swift in Sources */,
 				F37F474128207E65009FAF0F /* EcommerceAppKitAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
