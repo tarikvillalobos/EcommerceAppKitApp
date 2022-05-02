@@ -42,6 +42,8 @@ struct OnBoardingPage: View {
         .background(Color.purple)
         .ignoresSafeArea(.all)
         
+        
+        
     }
 }
 
