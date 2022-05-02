@@ -41,9 +41,6 @@ struct OnBoardingPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.purple)
         .ignoresSafeArea(.all)
-        
-        
-        
     }
 }
 
