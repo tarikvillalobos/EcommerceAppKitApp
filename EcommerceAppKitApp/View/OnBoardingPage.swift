@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnBoardingPage: View {
+    // Showing Login Page...
+    @State var showLoginPage: Bool = false
     var body: some View {
         
         VStack(alignment: .leading){
@@ -23,7 +25,11 @@ struct OnBoardingPage: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 400, height: 400)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button {
+                withAnimation{
+                    showLoginPage = true
+                }
+            } label: {
                 Text("Get started")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
@@ -32,7 +38,9 @@ struct OnBoardingPage: View {
                     .background(Color.white)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 5, y: 5)
                     .foregroundColor(Color.purple)
-            }).padding(.horizontal,30)
+                    .cornerRadius(15)
+            }
+            .padding(.horizontal,30)
             .offset(y: getRect().height < 750 ? 20 : 40)
             
             Spacer()
@@ -41,6 +49,15 @@ struct OnBoardingPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.purple)
         .ignoresSafeArea(.all)
+        .overlay(
+        
+            Group{
+                if showLoginPage{
+                    LoginPage()
+                        .transition(.move(edge: .bottom))
+                }
+            }
+        )
     }
 }
 

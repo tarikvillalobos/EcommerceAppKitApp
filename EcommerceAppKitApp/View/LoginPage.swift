@@ -26,7 +26,7 @@ struct LoginPage: View {
             
                 VStack{
                     
-                    Text("Login")
+                    Text(loginData.registerUser ? "Register" : "Login")
                         .font(.system(size: 22)).bold()
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         
@@ -86,7 +86,7 @@ struct LoginPage: View {
                         }
                     } label: {
                         
-                        Text("Create account?")
+                        Text(loginData.registerUser ? "Back to login" : "Create account?")
                             .font(.system(size: 14))
                             .fontWeight(.semibold)
                             .foregroundColor(Color.purple)
@@ -104,6 +104,17 @@ struct LoginPage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(.purple))
         .ignoresSafeArea()
+        
+        // Clearing data shen Changes...
+        // Optional...
+        .onChange(of: loginData.registerUser) { newValue in
+            
+            loginData.email = ""
+            loginData.password = ""
+            loginData.re_Enter_Password = ""
+            loginData.showPassword = false
+            loginData.showReEnterPassword = false
+        }
     }
     
     @ViewBuilder
